@@ -34,26 +34,88 @@
         }
         
         /* Foto de perfil */
-        .profile-img {
+        .profile-img-container {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            object-fit: cover;
+            margin: 0 auto 15px;
             border: 4px solid white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
         
         /* Títulos y descripción */
         h1 {
-            margin: 15px 0 5px;
+            margin: 0 0 5px;
             font-size: clamp(22px, 5vw, 28px);
             color: #d14d8b;
         }
         
         .subtitle {
-            margin: 0 0 20px;
+            margin: 0 0 15px;
             font-size: clamp(14px, 3vw, 16px);
             color: #666;
+        }
+        
+        /* Íconos de redes sociales - POSICIONADOS DESPUÉS DEL NOMBRE */
+        .social-icons {
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-width: 300px;
+        }
+        
+        .social-icon {
+            color: white;
+            background: linear-gradient(45deg, #d14d8b, #ff6b9e);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.4s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff6b9e, #d14d8b);
+            top: 0;
+            left: -100%;
+            transition: all 0.4s ease;
+            z-index: -1;
+            border-radius: 50%;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(209, 77, 139, 0.3);
+            color: white;
+        }
+        
+        .social-icon:hover::after {
+            left: 0;
         }
         
         /* Botones de enlaces */
@@ -72,32 +134,30 @@
             transition: all 0.3s ease;
             border: 2px solid #f0a6ca;
             font-size: clamp(14px, 3vw, 16px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .link-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
         }
         
         .link-button:hover {
             background: #d14d8b;
             color: white;
             transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(209, 77, 139, 0.2);
         }
         
-        /* Íconos de redes sociales */
-        .social-icons {
-            margin: 25px 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .social-icon {
-            color: #d14d8b;
-            font-size: clamp(20px, 6vw, 24px);
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            color: #a8376d;
-            transform: scale(1.2);
+        .link-button:hover::before {
+            left: 100%;
         }
         
         /* Footer */
@@ -113,9 +173,15 @@
                 padding: 15px;
             }
             
-            .profile-img {
+            .profile-img-container {
                 width: 100px;
                 height: 100px;
+            }
+            
+            .social-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
             }
             
             .link-button {
@@ -125,7 +191,7 @@
         }
 
         @media (max-width: 350px) {
-            .profile-img {
+            .profile-img-container {
                 width: 80px;
                 height: 80px;
             }
@@ -137,29 +203,45 @@
             .subtitle {
                 font-size: 13px;
             }
+            
+            .social-icons {
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Foto de perfil -->
-        <img src="tu-foto.jpg" alt="Ana Beauty Creator" class="profile-img">
+        <div class="profile-img-container">
+            <img src="tu-foto.jpg" alt="Ana Beauty Creator" class="profile-img">
+        </div>
         
         <!-- Nombre y descripción -->
         <h1>Ana | Beauty Creator</h1>
         <p class="subtitle">Tutoriales, Hacks y Reseñas</p>
+        
+        <!-- Íconos de redes sociales - AHORA DESPUÉS DEL TÍTULO -->
+        <div class="social-icons">
+            <a href="https://instagram.com/anadmmakeup" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@anadmmakeup" class="social-icon" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://youtube.com/@anadmmakeup" class="social-icon" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://pinterest.com/anadmmakeup" class="social-icon" aria-label="Pinterest">
+                <i class="fab fa-pinterest"></i>
+            </a>
+        </div>
         
         <!-- Botones principales -->
         <a href="https://tusitio.com/portfolio" class="link-button">Portfolio</a>
         <a href="https://tusitio.com/catalogo" class="link-button">Catálogo de Productos Skincare</a>
         <a href="mailto:tucorreo@example.com" class="link-button">Colabs (Contacto)</a>
         <a href="tel:+1234567890" class="link-button">Servicios de Maquillaje (WhatsApp)</a>
-        
-        <!-- Íconos de redes sociales -->
-        <div class="social-icons">
-            <a href="https://instagram.com/anadmmakeup" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://tiktok.com/@anadmmakeup" class="social-icon"><i class="fab fa-tiktok"></i></a>
-        </div>
         
         <!-- Footer -->
         <footer>
