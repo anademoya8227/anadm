@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Estilos generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #ffcce6, #f9f2ff);
@@ -13,9 +20,14 @@
             padding: 20px;
             text-align: center;
             color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .container {
+            width: 100%;
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
@@ -34,13 +46,13 @@
         /* Títulos y descripción */
         h1 {
             margin: 15px 0 5px;
-            font-size: 24px;
+            font-size: clamp(22px, 5vw, 28px);
             color: #d14d8b;
         }
         
         .subtitle {
             margin: 0 0 20px;
-            font-size: 16px;
+            font-size: clamp(14px, 3vw, 16px);
             color: #666;
         }
         
@@ -51,6 +63,7 @@
             color: #d14d8b;
             padding: 12px;
             margin: 12px auto;
+            width: 100%;
             max-width: 300px;
             text-decoration: none;
             border-radius: 25px;
@@ -58,6 +71,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             border: 2px solid #f0a6ca;
+            font-size: clamp(14px, 3vw, 16px);
         }
         
         .link-button:hover {
@@ -69,12 +83,15 @@
         /* Íconos de redes sociales */
         .social-icons {
             margin: 25px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         .social-icon {
             color: #d14d8b;
-            font-size: 24px;
-            margin: 0 10px;
+            font-size: clamp(20px, 6vw, 24px);
             transition: all 0.3s ease;
         }
         
@@ -86,8 +103,40 @@
         /* Footer */
         footer {
             margin-top: 20px;
-            font-size: 14px;
+            font-size: clamp(12px, 3vw, 14px);
             color: #888;
+        }
+
+        /* Media Queries para ajustes específicos */
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .link-button {
+                padding: 10px;
+                margin: 10px auto;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .profile-img {
+                width: 80px;
+                height: 80px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            .subtitle {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
@@ -110,7 +159,6 @@
         <div class="social-icons">
             <a href="https://instagram.com/anadmmakeup" class="social-icon"><i class="fab fa-instagram"></i></a>
             <a href="https://tiktok.com/@anadmmakeup" class="social-icon"><i class="fab fa-tiktok"></i></a>
-           
         </div>
         
         <!-- Footer -->
