@@ -1,45 +1,122 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Linktree</title>
+    <title>Ana | Beauty Creator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Estilos generales */
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffcce6, #f9f2ff);
             margin: 0;
             padding: 20px;
+            text-align: center;
+            color: #333;
         }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Foto de perfil */
         .profile-img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 10px auto;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .link {
+        
+        /* Títulos y descripción */
+        h1 {
+            margin: 15px 0 5px;
+            font-size: 24px;
+            color: #d14d8b;
+        }
+        
+        .subtitle {
+            margin: 0 0 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* Botones de enlaces */
+        .link-button {
             display: block;
-            background: #6200ee;
-            color: white;
-            padding: 10px;
-            margin: 10px auto;
+            background: white;
+            color: #d14d8b;
+            padding: 12px;
+            margin: 12px auto;
             max-width: 300px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid #f0a6ca;
         }
-        .link:hover {
-            background: #3700b3;
+        
+        .link-button:hover {
+            background: #d14d8b;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Íconos de redes sociales */
+        .social-icons {
+            margin: 25px 0;
+        }
+        
+        .social-icon {
+            color: #d14d8b;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: #a8376d;
+            transform: scale(1.2);
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <img src="tu-foto.jpg" alt="Foto de perfil" class="profile-img">
-    <h1>Ana De Moya</h1>
-    <p>¡Sígueme en mis redes!</p>
-    
-    <a href="https://instagram.com/anadmmakeup" class="link">Instagram</a>
-    <a href="https://tiktok.com/@anadmmakeup" class="link">TikTok</a>
+    <div class="container">
+        <!-- Foto de perfil -->
+        <img src="tu-foto.jpg" alt="Ana Beauty Creator" class="profile-img">
+        
+        <!-- Nombre y descripción -->
+        <h1>Ana | Beauty Creator</h1>
+        <p class="subtitle">Tutoriales, Hacks y Reseñas</p>
+        
+        <!-- Botones principales -->
+        <a href="https://tusitio.com/portfolio" class="link-button">Portfolio</a>
+        <a href="https://tusitio.com/catalogo" class="link-button">Catálogo de Productos Skincare</a>
+        <a href="mailto:tucorreo@example.com" class="link-button">Colabs (Contacto)</a>
+        <a href="tel:+1234567890" class="link-button">Servicios de Maquillaje (WhatsApp)</a>
+        
+        <!-- Íconos de redes sociales -->
+        <div class="social-icons">
+            <a href="https://instagram.com/anadmmakeup" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@anadmmakeup" class="social-icon"><i class="fab fa-tiktok"></i></a>
+           
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            © 2025 Ana Beauty Creator | Únete a @anadmmakeup en redes
+        </footer>
+    </div>
 </body>
 </html>
