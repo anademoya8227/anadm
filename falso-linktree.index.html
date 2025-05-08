@@ -15,11 +15,11 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ffcce6, #f9f2ff);
+            background: linear-gradient(135deg, #5a5a5a, #808080);
             margin: 0;
             padding: 20px;
             text-align: center;
-            color: #333;
+            color: #f0f0f0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -39,8 +39,8 @@
             height: 120px;
             border-radius: 50%;
             margin: 0 auto 15px;
-            border: 4px solid white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 4px solid #e0e0e0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
             transition: transform 0.3s ease;
         }
@@ -60,16 +60,16 @@
         h1 {
             margin: 0 0 5px;
             font-size: clamp(22px, 5vw, 28px);
-            color: #d14d8b;
+            color: #ffffff;
         }
         
         .subtitle {
             margin: 0 0 15px;
             font-size: clamp(14px, 3vw, 16px);
-            color: #666;
+            color: #e0e0e0;
         }
         
-        /* Íconos de redes sociales - ESTILO SIMPLE PERO DINÁMICO */
+        /* Íconos de redes sociales */
         .social-icons {
             margin: 0 auto 20px;
             display: flex;
@@ -80,14 +80,14 @@
         }
         
         .social-icon {
-            color: #d14d8b;
+            color: #e0e0e0;
             font-size: 24px;
             transition: all 0.4s ease;
             position: relative;
         }
         
         .social-icon:hover {
-            color: #a8376d;
+            color: #ffffff;
             transform: scale(1.2);
         }
         
@@ -99,7 +99,7 @@
             left: -10px;
             right: -10px;
             bottom: -10px;
-            border: 2px solid rgba(209, 77, 139, 0.3);
+            border: 2px solid rgba(224, 224, 224, 0.3);
             border-radius: 50%;
             opacity: 0;
             transition: all 0.4s ease;
@@ -113,11 +113,11 @@
             bottom: -5px;
         }
         
-        /* Botones de enlaces */
+        /* Botones de enlaces - AHORA EN ROSA CLARO */
         .link-button {
             display: block;
-            background: white;
-            color: #d14d8b;
+            background: #ffcce6;
+            color: #5a2d4a;
             padding: 12px;
             margin: 12px auto;
             width: 100%;
@@ -140,15 +140,15 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
             transition: 0.5s;
         }
         
         .link-button:hover {
-            background: #d14d8b;
-            color: white;
+            background: #f0a6ca;
+            color: #3d1e32;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(209, 77, 139, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         
         .link-button:hover::before {
@@ -159,7 +159,7 @@
         footer {
             margin-top: 20px;
             font-size: clamp(12px, 3vw, 14px);
-            color: #888;
+            color: #b0b0b0;
         }
 
         /* Media Queries para ajustes específicos */
@@ -210,21 +210,21 @@
             <img src="tu-foto.jpg" alt="Ana Beauty Creator" class="profile-img">
         </div>
         
-        <!-- Nombre y descripción -->
-        <h1>Ana | Beauty Creator</h1>
+        <!-- Nombre y descripción CON EMOJIS -->
+        <h1>💄 Ana | Beauty Creator 💋</h1>
         <p class="subtitle">Tutoriales, Hacks y Reseñas</p>
         
-        <!-- Íconos de redes sociales - estilo minimalista pero dinámico -->
+        <!-- Íconos de redes sociales -->
         <div class="social-icons">
             <a href="https://instagram.com/anadmmakeup" class="social-icon" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://tiktok.com/@anadmmakeup" class="social-icon" aria-label="TikTok">
+            <a href="https://tiktok.com/@anadmmakeup1" class="social-icon" aria-label="TikTok">
                 <i class="fab fa-tiktok"></i>
             </a>
         </div>
         
-        <!-- Botones principales -->
+        <!-- Botones principales en rosa claro -->
         <a href="https://anadmmakeup.my.canva.site/" class="link-button">Portfolio</a>
         <a href="https://cjtovar.github.io/skincare-ana/" class="link-button">Catálogo de Productos Skincare</a>
         <a href="mailto:anadmmakeup.pr@gmail.com" class="link-button">Collabs (Contacto)</a>
@@ -232,7 +232,7 @@
         
         <!-- Footer -->
         <footer>
-            © 2025 Ana Beauty Creator | Únete a @anadmmakeup en redes
+            © 2025 Ana | Beauty Creator
         </footer>
     </div>
 </body>
