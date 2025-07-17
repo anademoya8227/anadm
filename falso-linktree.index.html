@@ -15,7 +15,8 @@
         
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #5a5a5a, #808080);
+            background: url('https://www.freepik.es/vector-gratis/fondo-pintado-acuarela-pastel_13962247.htm#fromView=keyword&page=1&position=19&uuid=285f0b87-5fb0-4a91-b03d-abc6a6f7b8a9&query=Degradado+Color+Pastel') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 20px;
             text-align: center;
@@ -31,6 +32,11 @@
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         /* Foto de perfil */
@@ -113,11 +119,11 @@
             bottom: -5px;
         }
         
-        /* Botones de enlaces - AHORA EN ROSA CLARO */
+        /* Botones de enlaces - EN LILA */
         .link-button {
             display: block;
-            background: #ffcce6;
-            color: #5a2d4a;
+            background: #b388ff;
+            color: #2e1a47;
             padding: 12px;
             margin: 12px auto;
             width: 100%;
@@ -125,9 +131,9 @@
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
-            border: 2px solid #f0a6ca;
+            border: 2px solid #9c64ff;
             font-size: clamp(14px, 3vw, 16px);
             position: relative;
             overflow: hidden;
@@ -145,10 +151,10 @@
         }
         
         .link-button:hover {
-            background: #f0a6ca;
-            color: #3d1e32;
+            background: #9c64ff;
+            color: #1e1030;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
         }
         
         .link-button:hover::before {
@@ -224,7 +230,7 @@
             </a>
         </div>
         
-        <!-- Botones principales en rosa claro -->
+        <!-- Botones principales en lila -->
         <a href="https://anademoya8227.github.io/portfolio/anadmmakeup-portfolio.index.html" class="link-button">Portfolio</a>
         <a href="https://cjtovar.github.io/skincare-ana/" class="link-button">Catálogo de Productos Skincare</a>
         <a href="mailto:anadmmakeup.pr@gmail.com" class="link-button">Collabs (Contacto)</a>
