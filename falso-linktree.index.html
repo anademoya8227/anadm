@@ -30,7 +30,7 @@
             width: 100%;
             max-width: 500px;
             margin: 0 auto;
-            padding: 25px;
+            padding: 30px 25px; /* Más padding vertical */
         }
         
         /* Foto de perfil */
@@ -38,7 +38,7 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            margin: 0 auto 15px;
+            margin: 0 auto 25px; /* Más margen inferior */
             border: 4px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -59,9 +59,9 @@
         
         /* Títulos y descripción */
         h1 {
-            margin: 0 0 5px;
+            margin: 0 0 15px; /* Más margen inferior */
             font-size: clamp(22px, 5vw, 28px);
-            color: #333333; /* Gris oscuro */
+            color: #333333;
             position: relative;
             display: inline-block;
         }
@@ -69,7 +69,7 @@
         h1::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -8px; /* Bajamos la línea decorativa */
             left: 50%;
             transform: translateX(-50%);
             width: 50px;
@@ -78,15 +78,16 @@
         }
         
         .subtitle {
-            margin: 0 0 15px;
+            margin: 0 0 25px; /* Más margen inferior */
             font-size: clamp(14px, 3vw, 16px);
-            color: #333333; /* Gris oscuro */
+            color: #333333;
             font-style: italic;
+            line-height: 1.4; /* Más espacio entre líneas */
         }
         
         /* Íconos de redes sociales */
         .social-icons {
-            margin: 0 auto 20px;
+            margin: 0 auto 30px; /* Más margen inferior */
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -95,7 +96,7 @@
         }
         
         .social-icon {
-            color: #333333; /* Gris oscuro */
+            color: #333333;
             font-size: 24px;
             transition: all 0.4s ease;
             position: relative;
@@ -130,10 +131,10 @@
         /* Botones de enlaces */
         .link-button {
             display: block;
-            background: rgba(255, 255, 255, 0.6); /* Blanco con 60% de opacidad */
-            color: #333333; /* Gris muy oscuro */
-            padding: 12px;
-            margin: 12px auto;
+            background: rgba(255, 255, 255, 0.6);
+            color: #333333;
+            padding: 14px; /* Más padding vertical */
+            margin: 18px auto; /* Más margen vertical */
             width: 100%;
             max-width: 300px;
             text-decoration: none;
@@ -169,20 +170,33 @@
         
         /* Footer */
         footer {
-            margin-top: 20px;
+            margin-top: 30px; /* Más margen superior */
             font-size: clamp(12px, 3vw, 14px);
-            color: #333333; /* Gris oscuro */
+            color: #333333;
         }
 
         /* Media Queries para ajustes específicos */
         @media (max-width: 480px) {
             .container {
-                padding: 20px;
+                padding: 25px 20px;
             }
             
             .profile-img-container {
                 width: 100px;
                 height: 100px;
+                margin-bottom: 20px;
+            }
+            
+            h1 {
+                margin-bottom: 12px;
+            }
+            
+            .subtitle {
+                margin-bottom: 20px;
+            }
+            
+            .social-icons {
+                margin-bottom: 25px;
             }
             
             .social-icon {
@@ -190,8 +204,8 @@
             }
             
             .link-button {
-                padding: 10px;
-                margin: 10px auto;
+                padding: 12px;
+                margin: 15px auto;
             }
         }
 
